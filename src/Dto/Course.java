@@ -51,9 +51,9 @@ public class Course {
 		this.fee = fee;
 	}
 	
-	@Override
-	public String toString() {
-		return "Course [id=" + id + ", name=" + name + ", duration=" + duration + ", fee=" + fee + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Course [id=" + id + ", name=" + name + ", duration=" + duration + ", fee=" + fee + "]";
+//	}
 	
 }

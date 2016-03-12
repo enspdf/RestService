@@ -24,7 +24,7 @@
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jersey-client-1.18.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jersey-core-1.18.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jersey-json-1.18.jar"/>
-	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jersey-server-1.18.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jersey-server-1.18.jar" sourcepath="/Users/shackox/.m2/repository/com/sun/jersey/jersey-server/1.18/jersey-server-1.18-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jersey-servlet-1.18.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jettison-1.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jsr311-api-1.1.1.jar"/>
