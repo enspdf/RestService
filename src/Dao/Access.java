@@ -70,5 +70,16 @@ public class Access {
 		}
 		return course;
 	}
+	
+	public Course updateCourse(Connection con, int id, String name) throws SQLException {
+		Course course = new Course();
+		PreparedStatement stmt = con.prepareStatement("UPDATE Course SET name = " + name + " WHERE id = " + id);
+		try {
+			stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return course;
+	}
 
 }

@@ -46,4 +46,13 @@ public class AccessManager {
 		return course;
 	}
 	
+	public Course updateCourse(int id, String name) throws Exception {
+		Course course = new Course();
+		Database db = new Database();
+		Connection con = db.getConnection();
+		Access access = new Access();
+		course = access.updateCourse(con, id, name);
+		return course;
+	}
+	
 }

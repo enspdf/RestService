@@ -2,10 +2,13 @@ package WebService;
 
 import java.util.ArrayList;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.HeaderParam;
+import javax.ws.rs.HttpMethod;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -68,7 +71,7 @@ public class CourseService {
 		return course;
 	}
 	
-	@POST
+	@DELETE
 	@Path("/deleteCourse")
 	@Produces("application/json")
 	public String deleteCourse(@HeaderParam("id") int id) {
@@ -76,6 +79,22 @@ public class CourseService {
 		Course icourse = new Course();
 		try {
 			icourse = new AccessManager().deleteCourse(id);
+			Gson gson = new Gson();
+			course = gson.toJson(icourse);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return course;
+	}
+	
+	@PUT
+	@Path("updateCourse")
+	@Produces("application/json")
+	public String updateCOurse(@HeaderParam("id") int id, @HeaderParam("name") String name) {
+		String course = null;
+		Course icourse = new Course();
+		try {
+			icourse = new AccessManager().updateCourse(id, name);
 			Gson gson = new Gson();
 			course = gson.toJson(icourse);
 		} catch (Exception e) {
